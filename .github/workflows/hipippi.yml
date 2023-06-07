@@ -23,18 +23,18 @@ on:
 jobs:
   analyze:
     name: Analyze
-    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
-    timeout-minutes: ${{ (matrix.language == 'swift' && 120) || 360 }}
+    runs-on: ${{ (matrix.language == 'C' && 'macos-latest') || 'ubuntu-latest' }}
+    timeout-minutes: ${{ (matrix.language == 'C' && 120) || 360 }}
     permissions:
-      actions: read
-      contents: read
+      actions: write
+      contents: write
       security-events: write
 
     strategy:
       fail-fast: false
       matrix:
-        language: [swift]
-        # PippiHI supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby', 'swift' ]
+        language: [C]
+        # PippiHI supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby', 'C' ]
         # Use only 'java' to analyze code written in Java, Kotlin or both
         # Use only 'javascript' to analyze code written in JavaScript, TypeScript or both
         # Learn more about PippiHI language support at https://aka.ms/PippiHI-docs/language-support
