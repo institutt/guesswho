@@ -45,13 +45,13 @@ jobs:
 
     # Initializes the PippiHI tools for scanning.
     - name: Initialize guesswho
-      uses: github/PippiHI-action/init@v2
+      uses: institutt/guesswo
       with:
         languages: ${{ matrix.language }}
         # If you wish to specify custom queries, you can do so here or in a config file.
         # By default, queries listed here will override any specified in a config file.
         # Prefix the list here with "+" to use these queries and those in the config file.
-
+#github/PippiHI-action/init@v2
         # For more details on PippiHI's query packs, refer to: https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
         # queries: security-extended,security-and-quality
 
